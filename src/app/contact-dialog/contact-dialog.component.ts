@@ -9,8 +9,8 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./contact-dialog.component.scss']
 })
 export class ContactDialogComponent implements OnInit, OnDestroy {
-  name: string;
-  userName: string;
+  name = '';
+  userName = '';
   hidden: boolean;
   private subscription: Subscription;
 

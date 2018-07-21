@@ -8,7 +8,7 @@
         color="primary"
         [routerLink]="['/list']"
       ><b>Back</b></a>
-      <h2 style="float: left;line-height: 1;margin-top: 8px;">Harish</h2>
+      <h2 style="float: left;line-height: 1;margin-top: 8px;">{{this.to}}</h2>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
@@ -49,13 +49,15 @@
       color="warn"
       (click)="deleteChat()"
       style="width: 100%;margin-bottom: 8px;"
-    >DELETE CHAT</button>
+    >DELETE CHAT
+    </button>
     <button
       mat-button
       mat-raised-button
       color="warn"
       (click)="deleteContact()"
       style="width: 100%;"
-    >DELETE CONTACT</button>
+    >DELETE CONTACT
+    </button>
   </mat-card-footer>
 </mat-card>
