@@ -38,6 +38,7 @@ export class ChatComponent implements OnInit {
       return;
     }
     this.userService.sendMessage(this.to, this.message);
+    this.message = '';
   }
 
   deleteContact() {
