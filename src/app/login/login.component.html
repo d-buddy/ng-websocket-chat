@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <mat-form-field>
+        <input [(ngModel)]="userName" matInput type="text" name="username" placeholder="user name">
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="clearfix" style="height: 40px;">
+    <mat-progress-spinner
+      style="margin-right: 50px;"
+      class="float-right"
+      *ngIf="processing"
+      mode="indeterminate"
+      [diameter]="30"
+    >
+    </mat-progress-spinner>
+    <button
+      (click)="tryLogin()"
+      *ngIf="!buttonDisable"
+      class="float-right"
+      mat-raised-button
+      mat-button
+      color="primary"
+    >
+      Login
+    </button>
+  </mat-card-actions>
+</mat-card>
+<button mat-button mat-raised-button color="warn" (click)="clearData()" style="margin-top: 24px;">Clear Data</button>

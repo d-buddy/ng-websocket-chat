@@ -1,0 +1,25 @@
+.container > * {
+  width: 100%;
+}
+
+.container > div{
+  overflow: auto;
+  clear: both;
+}
+
+.left-chat, .right-chat {
+  max-width: 80%;
+  width: auto !important;
+  min-width: 0;
+  margin: 4px 0;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.left-chat {
+  float: left;
+}
+
+.right-chat {
+  float: right;
+}

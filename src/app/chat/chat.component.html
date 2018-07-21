@@ -1,0 +1,61 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <a
+        style="float: left;margin-right: 16px;"
+        mat-button
+        mat-stroked-button
+        color="primary"
+        [routerLink]="['/list']"
+      ><b>Back</b></a>
+      <h2 style="float: left;line-height: 1;margin-top: 8px;">Harish</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-divider></mat-divider>
+    <div class="container">
+      <div *ngFor="let message of messages">
+        <mat-card [ngClass]="message.type==='from'?'left-chat':'right-chat'">
+          {{message.message}}
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-divider></mat-divider>
+    <div style="margin:24px 8px 8px 8px;">
+      <mat-form-field style="width: 85%;display: inline-block;">
+        <input
+          type="text"
+          placeholder="message"
+          matInput
+          [(ngModel)]="message"
+        />
+      </mat-form-field>
+      <button
+        (click)="sendMessage()"
+        mat-button
+        color="primary"
+        mat-mini-fab
+        [disabled]="this.message.length===0"
+        style="margin-left: 4px;"
+      >
+        <b>&gt;</b>
+      </button>
+    </div>
+    <button
+      mat-button
+      mat-raised-button
+      color="warn"
+      (click)="deleteChat()"
+      style="width: 100%;margin-bottom: 8px;"
+    >DELETE CHAT</button>
+    <button
+      mat-button
+      mat-raised-button
+      color="warn"
+      (click)="deleteContact()"
+      style="width: 100%;"
+    >DELETE CONTACT</button>
+  </mat-card-footer>
+</mat-card>

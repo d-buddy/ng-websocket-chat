@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add contact</h1>
+<mat-dialog-content>
+  <div class="container">
+    <mat-form-field>
+      <input type="text" name="name" [(ngModel)]="name" placeholder="name" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" name="username" [(ngModel)]="userName" placeholder="user name" matInput>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions *ngIf="!hidden" class="float-right">
+  <button mat-dialog-close mat-button color="accent" mat-raised-button>Close</button>
+  <button (click)="addContact()" mat-button color="primary"  mat-raised-button class="float-right">Add</button>
+</mat-dialog-actions>
